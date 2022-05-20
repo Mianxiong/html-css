@@ -9,10 +9,14 @@
 </head>
 
 <body>
+    <!-- 一个form表单，必须要有一个type的submit，才可以提交，如果写了一个按钮没有写type，默认就是submit -->
     <form action="/xxx" method="POST" autocomplete="on" target="_blank">
         <input name="username" type="text" />
         <input type="submit" value="提交了哈" />
-        <button type="submit">搞起</button>
+        <button type="submit">
+            <strong>搞起</strong>
+            <img width="200" src="hai.jpeg" alt="">
+        </button>
 
         <input type="text" required/>
         <hr />
@@ -20,12 +24,19 @@
         <hr />
         <input type="password">
         <hr />
+        <!-- 两个radio用同一个name，做到二选一 -->
         <input name="gender" type="radio">男
         <input name="gender" type="radio">女
         <hr />
-        <!-- input type="checkbox" name="hobby" -->
+        <!-- 页面上有很多checkbox，如何知道checkbox是一组的呢？让这几个checkbox拥有同一个name -->
         <input type="checkbox" name="hobby"/>唱<input type="checkbox" name="hobby"/>跳<input type="checkbox" name="hobby"/>Rap<input type="checkbox"
-            width="50%" height="300px" />篮球
+        name="hobby" />篮球
+        <hr/>
+        <input type="file">
+        <input type="file" multiple>
+        <hr/>
+        看不见我吧：<input type="hidden">
+        <hr/>
         <textarea style="resize: none;width: 50%;height: 300px;"></textarea>
         <hr />
         <select>
@@ -34,8 +45,6 @@
             <option value="2">星期二</option>
         </select>
         <hr />
-        <input type="file">
-        <input type="file" multiple>
     </form>
 </body>
 
