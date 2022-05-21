@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* span{
+            border:1px solid red;
+        }
+        div{
+            border:1px solid red;
+        } */
+        /* 合并 */
+        span,
+        div {
+            border: 1px solid red;
+        }
+
+        /* span {
+            display: block;
+        } */
+        .ib{
+            border:1px solid blue;
+            display: inline-block;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- span{第$个span元素}*8 -->
+    <span>第1个span元素</span><span>第2个span元素</span><span>第3个span元素</span><span>第4个span元素</span><span>第5个span元素</span><span>第6个span元素</span><span>第7个span元素</span><span>第8个span元素</span>
+    <div>第1个div元素</div>
+    <div>第2个div元素</div>
+    <div>第3个div元素</div>
+    <div>第4个div元素</div>
+    <div>第5个div元素</div>
+    <div>第6个div元素</div>
+
+    <!-- span.ib{第$个inline-block元素}*8 -->
+    <span class="ib">第1个inline-block元素</span><span class="ib">第2个inline-block元素</span><span
+        class="ib">第3个inline-block元素</span><span class="ib">第4个inline-block元素</span><span
+        class="ib">第5个inline-block元素</span><span class="ib">第6个inline-block元素</span><span
+        class="ib">第7个inline-block元素</span><span class="ib">第8个inline-block元素</span>
+
+</body>
+
+</html>
