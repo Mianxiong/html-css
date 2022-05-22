@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .clearfix:after {
+            content: '';
+            display: block;
+            clear: both;
+        }
+
+        .logo {
+            border: 1px solid red;
+            height: 40px;
+            width: 100px;
+            float: left;
+            margin-top: 5px;
+            margin-left: 10px;/*在IE6会自动变成双倍*/
+            display: inline-block;
+        }
+
+        nav {
+            border: 1px solid green;
+            width: 200px;
+            height: 50px;
+            float: right;
+        }
+
+        .user {
+            border: 1px solid blue;
+            height: 30px;
+            float: left;
+            max-width: 100px;
+        }
+
+        header {
+            border: 1px solid black;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- header是块级元素，是由内部文档流的元素的总和决定的， -->
+    <!-- 如果header里面没有文档流元素，header的高度就是0，加入clearfix可以解决这个问题 -->
+
+    <header class="clearfix">
+        <!-- div加了float会脱离文档流 -->
+        <div class="logo">这是XDML</div>
+        <!-- nav加了float会脱离文档流 -->
+        <nav>这是导航</nav>
+        <!-- <div class="user">我很长</div> -->
+    </header>
+</body>
+
+</html>

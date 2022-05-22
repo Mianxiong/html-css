@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .clearfix:after {
+            content: '';
+            display: block;
+            clear: both;
+        }
+
+        img {
+            max-width: 100%;
+        }
+
+        .logo {
+            background: grey;
+            display: inline-block;
+            float: left;
+            margin-left: 10px;
+        }
+
+        .logo>img {
+            /* width: 100px; */
+            /* border: 1px solid red; */
+            height: 260px;
+            vertical-align: middle;
+            /*如果发现图片下面有多余的东西，使用vertical-align:top/middle */
+        }
+
+        ul,
+        ol {
+            list-style: none;
+        }
+
+        ul>li {
+            float: left;
+            /* border: 1px solid red; */
+            padding: 4px 0.5em;
+            line-height: 1;
+            /*文字的高度用line-height确定*/
+        }
+
+        ul {
+            /* border: 1px solid green; */
+            display: inline-block;
+            margin-top: 117px;
+            /*(260+26)/2-26*/
+        }
+
+        .nav {
+            float: left;
+            margin-left: 20px;
+        }
+
+        header {
+            /* border: 1px solid blue; */
+            background: grey;
+            color: white;
+        }
+
+        .content {
+            /* border: 1px solid red; */
+            /*有时候border会干扰宽度，可以改成outline*/
+            outline: 1px solid red;
+            width: 800px;
+            /*最外面的content是宽度固定像素的，只需要写margin:0 auto;就居中了*/
+            /* margin: 0 auto;不是最优写法 */
+            /* 最优写法，只对块元素有用 */
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .content>aside {
+            width: 200px;
+            /* border: 1px solid green; */
+            height: 300px;
+            float: left;
+            background: #999;
+            /* display: inline-block; */
+        }
+
+        .content>main {
+            /* border: 1px solid purple; */
+            height: 300px;
+            width: 500px;
+            float: left;
+            background: #ccc;
+        }
+
+        .content>.ad {
+            width: 100px;
+            /* border:1px solid black; */
+            height: 300px;
+            float: left;
+        }
+
+        .imageList {
+            outline: 1px solid green;
+            width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+            margin-top: 10px;
+        }
+
+        .imageList>.x>.image {
+            width: 191px;
+            height: 191px;
+            background: #000;
+            border: 1px solid red;
+            float: left;
+            /* margin-top: 10px; */
+            margin-bottom: 10px;
+            margin-right: 12px;
+        }
+
+        .imageList>.x {
+            /* 采用负margin */
+            margin-right: -12px;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- <div>两栏布局</div> -->
+    <header class="clearfix">
+        <div class="logo"><img src="./hai.jpeg" alt=""></div>
+        <ul class="clearfix nav">
+            <li>首页</li>
+            <li>男装</li>
+            <li>运动</li>
+            <li>百货</li>
+        </ul>
+    </header>
+    <div class="content clearfix">
+        <aside>一行有很多个字</aside>
+        <main></main>
+        <div class="ad"></div>
+    </div>
+
+    <!-- 平均布局 -->
+    <div class="imageList">
+        <div class="x clearfix">
+            <div class="image"></div>
+            <div class="image"></div>
+            <div class="image"></div>
+            <div class="image"></div>
+        </div>
+
+    </div>
+</body>
+
+</html>
