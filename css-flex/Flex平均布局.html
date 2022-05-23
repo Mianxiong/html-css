@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        ul,
+        ol {
+            list-style: none;
+        }
+
+        .imageList {
+            /* border: 1px solid red; */
+            width: 800px;
+            margin-left:auto;
+            margin-right: auto;
+            margin-top: 10px;
+            
+        }
+
+        .imageList > .x {
+            display: flex;
+            flex-wrap: wrap;
+            margin-right: -12px;
+            /* justify-content: space-between; */
+        }
+
+        .image {
+            width: 191px;
+            height: 191px;
+            background: grey;
+            border: 1px solid red;
+            margin-right: 12px;
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- 平均布局 -->
+    <div class="imageList">
+        <div class="x">
+            <div class="image"></div>
+            <div class="image"></div>
+            <div class="image"></div>
+            <div class="image"></div>
+            <div class="image"></div>
+            <div class="image"></div>
+            <div class="image"></div>
+        </div>
+    </div>
+</body>
+
+</html>

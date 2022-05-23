@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container {
+            display: flex;
+            border: 1px solid red;
+            flex-direction: row;
+            flex-wrap: nowrap;
+        }
+        .item {
+            /* width: 50px; */
+            border: 1px solid green;
+            height: 50px;
+            /* flex-grow: 1; */
+            width: 150px;
+        }
+        /* :first-child 表示在一组兄弟元素中的第一个元素 */
+        .item:first-child {
+            /* 可以使用order来改变显示顺序 */
+            /* order: 100; */
+
+            /* 可以使用flex-grow分配剩余空间的相对比例。控制自己如何长胖 */
+            flex-grow: 1;
+            /* CSS flex-shrink 属性指定了 flex 元素的收缩规则。flex 元素仅在默认宽度之和大于容器的时候才会发生收缩，其收缩的大小是依据 flex-shrink 的值。控制自己如何变瘦 */
+            flex-shrink: 1;
+        }
+        .item:nth-child(2) {
+            /* order: 2; */
+            /* flex-grow: 2; */
+            flex-grow: 1;
+            flex-shrink: 5;
+        }
+        .item:nth-child(3) {
+            /* order: 3; */
+            flex-grow: 1;
+            flex-shrink: 1;
+        }
+        .item:nth-child(4) {
+            /* order: 4; */
+            height: 50px;
+            /* 某一个item可以特立独行，只需要写align-self */
+            align-self: flex-end;
+        }
+        .item:last-child {
+            order: 1;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="item">logo</div>
+        <div class="item">导航</div>
+        <div class="item">头像</div>
+        <!-- <div class="item">4</div>
+        <div class="item">5:1</div> -->
+    </div>
+</body>
+
+</html>
